@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; 
+    width: 0 !important;
+    height: 0 !important;
+}
+
+body {
+    background-image: url('vecteezy_wedding-party-decoration-scene-background_53808755.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 40px 15px; 
+    overflow-x: hidden;
+        font-family: 'Aref Ruqaa', 'Amiri', serif !important;
+
+}
+/* الظرف */
+.envelope-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+    background-image: url('vecteezy_wedding-party-decoration-scene-background_53808755.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+        font-family: 'Aref Ruqaa', 'Amiri', serif !important;
+
+}
+
+.envelope-wrapper.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    display: none; 
+        font-family: 'Aref Ruqaa', 'Amiri', serif !important;
+
+}
+
+.envelope {
+    position: relative;
+    width: 330px;
+    height: 220px;
+background: linear-gradient(135deg, #e5d4b4 0%, #c5b08c 50%, #e5d4b4 100%);    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid #52492b;
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.25),
+        inset 0 0 25px rgba(236, 23, 7, 0.3);
+    transition: transform 0.3s ease;
+        font-family: 'Aref Ruqaa', 'Amiri', serif !important;
+
+}
+
+.envelope:hover {
+    transform: scale(1.03);
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 165px solid transparent;
+    border-right: 165px solid transparent;
+    border-top: 120px solid #ff0909;
+    transform-origin: top;
+    transition: .6s;
+    z-index: 3;
+}
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+.pocket {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: #e2c697;
+    clip-path: polygon(
+        0 25%,
+        50% 100%,
+        100% 25%,
+        100% 100%,
+        0 100%
+    );
+    z-index: 2;
+}
+
+.envelope::after {
+    content: "❤️";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #9b2335;
+    border-radius: 50%;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    z-index: 5;
+}
+
+.envelope-text {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    z-index: 4 ;
+    color: #7a572d;
+}
+
+.envelope-text h2 {
+    font-family: 'Aref Ruqaa', 'Amiri', serif;
+    font-size: 23px;
+}
+
+.envelope-text p {
+    font-size: 14px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.outside-text {
+    position: absolute;
+    top: 40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e3320;
+    font-family: 'Amiri', serif !important;
+    text-align: center;
+    z-index: 999;
+        border-radius: 16px;
+padding: 10px 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+   border: 1px solid rgba(117, 2, 146, 0.24); 
+  -webkit-backdrop-filter: blur(8px);
+ background: rgba(15, 23, 42, 0.20); 
+    backdrop-filter: blur(2px); /
+     }
+
+.card-container {
+    background: linear-gradient(135deg, #fffdfa 0%, #f7f1e5 100%);
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 20px;
+    position: relative;
+    z-index: 2;
+    border-radius: 35px;
+    overflow: hidden;
+    border: 2px solid #d4af37;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3), 0 0 15px rgba(212, 175, 55, 0.4);
+    text-align: center;
+    direction: rtl;
+    margin: 20px auto;
+}
+
+.card-container::before {
+    content: "";
+    position: absolute;
+    top: -70px;
+    left: -70px;
+    width: calc(100% + 140px);
+    height: calc(100% + 140px);
+    background-image: url("تنزيل (3).png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.card-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+.names-header h1 {
+    font-family: 'Aref Ruqaa', 'Amiri', serif !important;
+    font-size: 1.5 rem;
+    font-weight: 700;
+ color: #1a252f;
+ margin-bottom: 5px;
+}
+
+.heart {
+    color: #e74c3c;
+    font-size: 1.8rem;
+}
+
+.subtitle {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-weight: 600;
+    font-family: 'Aref Ruqaa', 'Amiri', serif !important;
+
+}
+
+.date-box {
+    background-color: #f3ede2;
+    border: 1px solid #e2d7c5;
+    border-radius: 25px;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    font-family: 'Aref Ruqaa', 'Amiri', serif !important;
+
+}
+
+.icon-calendar {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.85rem;
+    color: #a0826c;
+    font-weight: 600;
+}
+
+.asterisk {
+    color: #b8860b;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.date-text {
+    font-family: 'Amiri', serif !important;
+    font-size: 1.6rem;
+    color: #2c3e50;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.time-text {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.85rem;
+    color: #b8860b;
+    margin-top: 8px;
+}
+
+.photo-container {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.wedding-img {
+    width: 100% !important;
+    height: auto !important;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(105, 97, 97, 0.08);
+}
+
+.details-section {
+    margin-bottom: 25px;
+}
+
+.location-name {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.quote {
+    font-family: 'Amiri', serif !important;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #34495e;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.see-you {
+    font-family: 'Cairo', sans-serif;
+    font-size: 0.95rem;
+    color: #2c3e50;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.btn {
+    padding: 10px 12px;
+    border-radius: 20px;
+    border: 1px solid #6f757c;
+    background: #ffffff;
+    color: #4c555f;
+    font-size: 0.8rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 600;
+    flex: 1 1 42%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.btn-melody {
+    border: 1px solid #e0e0e0;
+}
+
+.btn-uber {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.btn-uber:hover {
+    background-color: #333333 !important;
+}
+
+.countdown-section {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px dashed #e2d7c5;
+    text-align: center;
+    width: 100%;
+}
+
+.countdown-title {
+    font-family: 'Amiri', serif !important;
+    font-size: 1.3rem;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 45px;
+}
+
+.time-box span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #721c24;
+    line-height: 1;
+}
+
+.time-box p {
+    font-size: 0.7rem;
+    color: #7f8c8d;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.colon {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #721c24;
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+/* تساقط أوراق الورد */
+.petal-emoji {
+    position: fixed;
+    top: -50px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 1;
+    animation: fallAnimation linear infinite;
+    will-change: transform, opacity; 
+}
+
+@keyframes fallAnimation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(105vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* التجاوب مع شاشات الموبايل */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+        align-items: flex-start;
+    }
+
+    .outside-text {
+        font-size: 16px !important;       
+        line-height: 1.7 !important;      
+        max-width: 90% !important;        
+        top: 25px !important;
+    }
+
+    .names-header h1 {
+        font-size: 2.1rem !important;
+    }
+
+    .card-container {
+        padding: 25px 15px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        flex: 1 1 42%;
+    }
+}
